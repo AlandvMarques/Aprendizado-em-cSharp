@@ -1,15 +1,5 @@
 ﻿// Using: / System:
 
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Reflection.Metadata;
-using static System.Net.Mime.MediaTypeNames;
-
 //NameSpace:
 
 namespace MeuApp
@@ -205,23 +195,23 @@ namespace MeuApp
             num--;
             Console.WriteLine(num);
 
-           /* Operadores de Comparação:
+            /* Operadores de Comparação:
 
-            Igual ==
-            Diferente !=
-            Maior que >
-            Menor que <
-            Maior ou igual a >=
-            Menor ou igual que <=
+             Igual ==
+             Diferente !=
+             Maior que >
+             Menor que <
+             Maior ou igual a >=
+             Menor ou igual que <=
 
-            int meuComparacao = 25;
-            meuComparacao == 0;
-            meuComparacao != 0;
-            meuComparacao > 0;
-            meuComparacao < 0;
-            meuComparacao <= 0;
-            meuComparacao >= 0
-           */
+             int meuComparacao = 25;
+             meuComparacao == 0;
+             meuComparacao != 0;
+             meuComparacao > 0;
+             meuComparacao < 0;
+             meuComparacao <= 0;
+             meuComparacao >= 0
+            */
 
             //Operadores Lógicos:
             // and == &&
@@ -230,7 +220,7 @@ namespace MeuApp
             int meuOperadorLogico = 10;
             bool entre = (meuOperadorLogico > 25) && (meuOperadorLogico < 40);
             Console.WriteLine(entre);
-            
+
             bool ou = (x > 25) || (x < 40);
             Console.WriteLine(ou);
 
@@ -257,10 +247,10 @@ namespace MeuApp
             int meuValorSwitch = 1;
             switch (meuValorSwitch)
             {
-                case 1:Console.WriteLine("1"); break;
-                case 2:Console.WriteLine("2"); break;
-                case 3:Console.WriteLine("3"); break;
-                case 4:Console.WriteLine("4"); break;
+                case 1: Console.WriteLine("1"); break;
+                case 2: Console.WriteLine("2"); break;
+                case 3: Console.WriteLine("3"); break;
+                case 4: Console.WriteLine("4"); break;
                 default: Console.WriteLine("5"); break;
             }
 
@@ -269,11 +259,11 @@ namespace MeuApp
             {
                 Console.WriteLine(i);
             }
-            
+
             //Laços de Repetição: While
             int meuWhilePrimario = 0;
-            while(meuWhilePrimario <= 10)
-            { 
+            while (meuWhilePrimario <= 10)
+            {
                 Console.WriteLine(meuWhilePrimario);
                 meuWhilePrimario++;
             }
@@ -284,28 +274,76 @@ namespace MeuApp
             {
                 Console.WriteLine(meuDoWhilePrimario);
                 meuDoWhilePrimario++;
-            }while (meuDoWhilePrimario <= 10);
+            } while (meuDoWhilePrimario <= 10);
 
             //Função ou Métodos:
             MeuMetodo();
 
             string MeuNomeFuncao = RetornaNome("Alan", "Marques");
             Console.WriteLine(MeuNomeFuncao);
-        }
-        //Função ou Métodos:
-        static void MeuMetodo()
-        {
-            Console.WriteLine("C# é legal");
-        }
 
-        static string RetornaNome(
-            string meuNome, 
-            string meuSobrenome,
-            int minhaIdade = 21
-            )
-        {
-            return meuNome + " " +meuSobrenome;
-        } 
+            //Value Type Reference Type:
+            int meuX = 25;
+            int meuY = meuX;
+            Console.WriteLine(meuX);
+            Console.WriteLine(meuY);
+
+            meuX = 32;
+            Console.WriteLine(meuX);
+            Console.WriteLine(meuY);
+
+            var meuArr = new string[2];
+            meuArr[0] = "primeiro item";
+
+            var meuArr2 = meuArr;
+
+            Console.WriteLine(meuArr[0]);
+            Console.WriteLine(meuArr2[0]);
+
+            meuArr[0] = "sengundo item";
+            Console.WriteLine(meuArr[0]);
+            Console.WriteLine(meuArr2[0]);
+
+            //Struts:
+            //    struct Product
+            //{
+            //    //propriedade 
+            //    public int Id;
+            //    public float Preco;
+
+            //    //Método
+            //    public float PrecEnDolar(float dolar)
+            //    {
+            //        return Preco * dolar;
+            //    }
+            //}
+
+            //Construtor:
+            //struct Product
+            //{
+            //    public Product(int id, string title, float price)
+            //    {
+            //        Id = id;
+            //        Title = title;
+            //        Price = price;
+            //    }
+         }
+            
+        //Função ou Métodos:
+            static void MeuMetodo()
+            {
+                Console.WriteLine("C# é legal");
+            }
+
+            static string RetornaNome(
+                string meuNome,
+                string meuSobrenome,
+                int minhaIdade = 21
+                )
+            {
+                return meuNome + " " + meuSobrenome;
+            }
+        //Struts:
 
     }
 }
