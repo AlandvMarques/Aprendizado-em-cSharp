@@ -15,7 +15,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace MeuApp
 {
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
             //Variável:
@@ -152,7 +152,150 @@ namespace MeuApp
 
             char meuValorPadraoChar = '\0';
             Console.WriteLine(meuValorPadraoChar);
-        }  
+
+            //Conversão Implícita:
+            float meuConversaoImplicitaPrimaria = 25.8f;
+            int meuConversaoImplicitaSecundaria = 25;
+            meuConversaoImplicitaPrimaria = meuConversaoImplicitaSecundaria;
+            Console.WriteLine(meuConversaoImplicitaPrimaria);
+
+            //Conversão Explícita: 
+            int meuConversaoExplicita = 100;
+            uint meuConversaoExplicitaSemSinal = (uint)meuConversaoExplicita;
+
+            //Parse:
+            int meuParse = int.Parse("10");
+            Console.WriteLine(meuParse);
+
+            //Convert:
+            int meuConvertPrimario = 100;
+            float meuConvertSecundario = 25.8f;
+            meuConvertPrimario = Convert.ToInt32(meuConvertSecundario);
+            Console.WriteLine(meuConvertPrimario);
+
+            //Operadores Aritiméticas:
+            int meuSoma = 25 + 22;
+            Console.WriteLine(meuSoma);
+
+            int meuSubtacao = 22 - 4;
+            Console.WriteLine(meuSubtacao);
+
+            int meuMultiplicacao = 25 * 2;
+            Console.WriteLine(meuMultiplicacao);
+
+            int meuDivisao = 25 * 3;
+            Console.WriteLine(meuDivisao);
+
+            int x = 2 + 2 * 2;
+            Console.WriteLine(x);
+
+            int y = 2 + (2 * 2);
+            Console.WriteLine(x);
+
+            int z = (2 + 2) * 2;
+            Console.WriteLine(x);
+
+            //Operadores de Atribuição:
+            int num = 0; //Atribuição
+            num += 5; // num = num + 5;
+            num -= 1; // num = num - 1;
+            num *= 10; //num = num * 10;
+            num /= 2; // num = num / 2;
+            num++;
+            num--;
+            Console.WriteLine(num);
+
+           /* Operadores de Comparação:
+
+            Igual ==
+            Diferente !=
+            Maior que >
+            Menor que <
+            Maior ou igual a >=
+            Menor ou igual que <=
+
+            int meuComparacao = 25;
+            meuComparacao == 0;
+            meuComparacao != 0;
+            meuComparacao > 0;
+            meuComparacao < 0;
+            meuComparacao <= 0;
+            meuComparacao >= 0
+           */
+
+            //Operadores Lógicos:
+            // and == &&
+            // ou == ||
+            // não == !
+            int meuOperadorLogico = 10;
+            bool entre = (meuOperadorLogico > 25) && (meuOperadorLogico < 40);
+            Console.WriteLine(entre);
+            
+            bool ou = (x > 25) || (x < 40);
+            Console.WriteLine(ou);
+
+            bool negacao = !(x < 25);
+            Console.WriteLine(negacao);
+
+            //Operações Lógicos:
+            int meuIdade = 18;
+            int meuMaiorIdadde = 21;
+            int meuIdadeMaxima = 65;
+
+            if (!(meuIdade >= meuMaiorIdadde || meuIdade < meuIdadeMaxima))
+            {
+                Console.WriteLine("É igual");
+            }
+            else
+            {
+                Console.WriteLine("É Diferente");
+            }
+
+            Console.WriteLine("Finalizou o pragrama");
+
+            //Estrutura Condicional: Switch
+            int meuValorSwitch = 1;
+            switch (meuValorSwitch)
+            {
+                case 1:Console.WriteLine("1"); break;
+                case 2:Console.WriteLine("2"); break;
+                case 3:Console.WriteLine("3"); break;
+                case 4:Console.WriteLine("4"); break;
+                default: Console.WriteLine("5"); break;
+            }
+
+            //Laços de Repetição: For
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+            
+            //Laços de Repetição: While
+            int meuWhilePrimario = 0;
+            while(meuWhilePrimario <= 10)
+            { 
+                Console.WriteLine(meuWhilePrimario);
+                meuWhilePrimario++;
+            }
+
+            //Laços de Repetição: Do
+            int meuDoWhilePrimario = 0;
+            do
+            {
+                Console.WriteLine(meuDoWhilePrimario);
+                meuDoWhilePrimario++;
+            }while (meuDoWhilePrimario <= 10);
+
+            //Função ou Métodos:
+            MeuMetodo();
+        }
+        //Função ou Métodos:
+        static void MeuMetodo()
+        {
+            Console.WriteLine("C# é legal");
+        }
+
+
     }
 }
 
