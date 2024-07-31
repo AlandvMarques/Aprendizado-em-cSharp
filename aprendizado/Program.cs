@@ -288,6 +288,9 @@ namespace MeuApp
 
             //Função ou Métodos:
             MeuMetodo();
+
+            string MeuNomeFuncao = RetornaNome("Alan", "Marques");
+            Console.WriteLine(MeuNomeFuncao);
         }
         //Função ou Métodos:
         static void MeuMetodo()
@@ -295,6 +298,14 @@ namespace MeuApp
             Console.WriteLine("C# é legal");
         }
 
+        static string RetornaNome(
+            string meuNome, 
+            string meuSobrenome,
+            int minhaIdade = 21
+            )
+        {
+            return meuNome + " " +meuSobrenome;
+        } 
 
     }
 }
