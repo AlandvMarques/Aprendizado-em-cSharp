@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aprendizado", "aprendizado\aprendizado.csproj", "{27AFD91B-6F4F-4DAD-B9A5-7948FEAA78CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aprendizado", "aprendizado\aprendizado.csproj", "{27AFD91B-6F4F-4DAD-B9A5-7948FEAA78CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AprendizadoCalculadora", "AprendizadoCalculadora\AprendizadoCalculadora.csproj", "{55F7B084-4DAF-4FC1-8A37-A249ED34E76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{27AFD91B-6F4F-4DAD-B9A5-7948FEAA78CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27AFD91B-6F4F-4DAD-B9A5-7948FEAA78CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27AFD91B-6F4F-4DAD-B9A5-7948FEAA78CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F7B084-4DAF-4FC1-8A37-A249ED34E76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F7B084-4DAF-4FC1-8A37-A249ED34E76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F7B084-4DAF-4FC1-8A37-A249ED34E76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F7B084-4DAF-4FC1-8A37-A249ED34E76D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
