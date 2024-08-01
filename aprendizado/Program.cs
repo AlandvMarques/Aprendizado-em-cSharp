@@ -2,6 +2,8 @@
 
 //NameSpace:
 
+using System.Security.Cryptography.X509Certificates;
+
 namespace MeuApp
 {
     class Program
@@ -329,11 +331,17 @@ namespace MeuApp
             //    }
 
 
-            Product mouse = new Product(1, "Mouse gamer", 287.89);
+            Product mouse = new Product(1, "Mouse gamer", 287.89, EnumProductType.Product);
+            var manutencaoEletrica = new Product(2, "Manutenção eletrica residencial", 2399.87, EnumProductType.Service);
 
                 Console.WriteLine(mouse.Id);
                 Console.WriteLine(mouse.Name);
                 Console.WriteLine(mouse.Price);
+
+                Console.WriteLine(mouse.Type);
+                Console.WriteLine((int) mouse.Type);
+
+
 
             // Enumerador:
             //enum EEstadoCivil 
@@ -361,25 +369,38 @@ namespace MeuApp
                 return meuNome + " " + meuSobrenome;
             }
 
-            //Struts:
+            //Struts & Enumerador:
             struct Product  
             { 
                 //construtor
-                public Product(int id, string meuNomeStruts, double price)
+                public Product(int id, string meuNomeStruts, double price, /*Enum:*/ EnumProductType type)
                 {
                     Id = id;
                     Name = meuNomeStruts;
                     Price = price;
+                //Enum:
+                 Type = type;
+                    
                 }
 
                 public int Id;
                 public string Name;
                 public double Price;
+            
+            //Enum:
+                public EnumProductType Type;
 
                 public double PriceInDolar(double dolar)
                 {
                     return Price * dolar;
                 }
+            }
+
+            //Enumerador:
+            enum EnumProductType
+            { 
+                Product = 1, 
+                Service = 2
             }
     }
  }
