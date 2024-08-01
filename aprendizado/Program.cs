@@ -335,11 +335,19 @@ namespace MeuApp
                 Console.WriteLine(mouse.Name);
                 Console.WriteLine(mouse.Price);
 
-            
+            // Enumerador:
+            //enum EEstadoCivil 
+            //{
+            //    Solteiro = 1,
+            //    Casado = 2,
+            //    Divorciadoo = 3
+            //}
+            // var cliente = new Cliente("João ", EEstadoCivil.Casado)
+
         }
-        
+
         //Função ou Métodos:
-            static void MeuMetodo()
+        static void MeuMetodo()
             {
                 Console.WriteLine("C# é legal");
             }
@@ -354,7 +362,7 @@ namespace MeuApp
             }
 
             //Struts:
-            struct Product 
+            struct Product  
             { 
                 //construtor
                 public Product(int id, string meuNomeStruts, double price)
