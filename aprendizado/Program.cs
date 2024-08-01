@@ -327,8 +327,17 @@ namespace MeuApp
             //        Title = title;
             //        Price = price;
             //    }
-         }
+
+
+            Product mouse = new Product(1, "Mouse gamer", 287.89);
+
+                Console.WriteLine(mouse.Id);
+                Console.WriteLine(mouse.Name);
+                Console.WriteLine(mouse.Price);
+
             
+        }
+        
         //Função ou Métodos:
             static void MeuMetodo()
             {
@@ -343,10 +352,30 @@ namespace MeuApp
             {
                 return meuNome + " " + meuSobrenome;
             }
-        //Struts:
 
+            //Struts:
+            struct Product 
+            { 
+                //construtor
+                public Product(int id, string meuNomeStruts, double price)
+                {
+                    Id = id;
+                    Name = meuNomeStruts;
+                    Price = price;
+                }
+
+                public int Id;
+                public string Name;
+                public double Price;
+
+                public double PriceInDolar(double dolar)
+                {
+                    return Price * dolar;
+                }
+            }
     }
-}
+ }
+
 
 
 
